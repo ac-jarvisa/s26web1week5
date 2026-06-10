@@ -46,6 +46,11 @@ h3{
     margin:10px 0;
 }
 
+/* you can style multiple elements at the same time using a , */
+h1, h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 /* since links have a default style in the browser, we need to style them
 directly to override this */
 a{
@@ -65,6 +70,7 @@ a:active{
     color:rgb(194, 37, 176);
 }
 
+
 /* there is also a visited state, if the user has been to the page
 before... but that one isn't used often */
 
@@ -75,8 +81,14 @@ footer{
 
 /* using space means go inside the first element to look for the second
 ... this example targets only p elements inside the footer */
+/* 0 0 0 2 - two tag name targets */
 footer p{
     font-size:12px;
+}
+
+/* 0 0 0 1 - one tag name target */
+p{
+    font-size:18px;
 }
 
 /* sometimes you want to style multiple elements the same way, but
@@ -84,4 +96,23 @@ can't target them based on tag name - for this, you can use class
 to target a class, use a . before the name */
 .larger{
     font-size:24px;
+}
+
+/* order in CSS matters, but some targets are more important than others...*/
+/* the order goes:
+    tag name
+    class
+    id
+
+    specificity value
+    0 0 0 0 - "important", "id", "class", "tag"
+*/
+/* 0 1 0 0 - one id target */
+#tophead{
+    color:red;
+}
+
+/* 0 0 0 1 - one tag name target */
+h1{
+    color:chartreuse;
 }
