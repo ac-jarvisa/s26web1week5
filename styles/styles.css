@@ -116,3 +116,9 @@ to target a class, use a . before the name */
 h1{
     color:chartreuse;
 }
+
+/* you can change the style of a list using list-style */
+ul{
+    list-style:square; /* would make bullets square */
+    /* list-style:none; would remove all bullets */
+}
